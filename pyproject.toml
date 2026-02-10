@@ -1,7 +1,18 @@
 [project]
 name = "multiagent-candidate-screening-maryia"
 version = "0.1.0"
-description = "Add your description here"
+description = "Multi-agent candidate screening system"
 readme = "README.md"
-requires-python = ">=3.10"
-dependencies = []
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.18.3",
+    "fastapi>=0.128.6",
+    "pydantic-settings>=2.12.0",
+    "sqlalchemy>=2.0.46",
+]
+[tool.setuptools]
+package-dir = {"" = "src"}
+[tool.setuptools.packages.find]
+where = ["src"]
+[project.scripts]
+screening-agent = "screening_agent.main:main"
