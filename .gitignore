@@ -212,3 +212,4 @@ __marimo__/
 # But keep git config files
 !.gitignore
 !.gitattributes
+!.env.example
