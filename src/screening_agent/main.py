@@ -1,7 +1,4 @@
-def main():
-    from screening_agent.config.settings import settings
-    print("Settings loaded:", settings.DB_URL)
+from screening_agent.api.app import create_app
 
 
-if __name__ == "__main__":
-    main()
+app = create_app()
